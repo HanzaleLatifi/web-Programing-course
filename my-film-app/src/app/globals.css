@@ -9,5 +9,14 @@ body {
   box-sizing: border-box;  
   user-select: none;
   font-family: var(--vazir-font);
+  scroll-behavior: smooth;
+  
+  
   ;
+}
+
+@layer components {
+  .hover-text {
+    @apply transition-all  text-gray-300 tracking-wide;
+  }
 }

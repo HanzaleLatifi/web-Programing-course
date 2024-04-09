@@ -1,8 +1,12 @@
+import Navigation from "../../components/Navigation";
+
 export default function Home() {
   return (
-    <main className="grid grid-cols-4">
-      <div className="col-span-1 bg-fuchsia-500">hi</div>
-      <div className="col-span-3 bg-blue-700"></div>
+    <main className="grid grid-cols-5 max-w-[1440px] mx-auto bg-slate-800">
+      <div className="col-span-1 shadow-xl ">
+        <Navigation />
+      </div>
+      <div className=" col-span-4">2</div>
     </main>
   );
 }
