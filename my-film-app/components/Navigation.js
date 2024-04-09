@@ -15,7 +15,9 @@ const Navigation = () => {
   const pathname = usePathname();
 
   const isActive = (activePathname) => {
-    return pathname === activePathname ? "text-red-700" : "text-white";
+    return pathname === activePathname
+      ? "text-red-700 border-r-2 rounded-2xl p-1 "
+      : "text-white";
   };
 
   return (
@@ -25,7 +27,7 @@ const Navigation = () => {
 
         <Link
           href="/"
-          className={`flex items-center py-2 pl-4 hover:hover-text   ${isActive(
+          className={`flex items-center py-2 pl-4 hover:hover-text     ${isActive(
             "/"
           )}`}
         >
