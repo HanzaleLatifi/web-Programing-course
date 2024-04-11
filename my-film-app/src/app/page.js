@@ -1,3 +1,4 @@
+import Header from "../../components/Header";
 import Navigation from "../../components/Navigation";
 
 export default function Home() {
@@ -6,7 +7,9 @@ export default function Home() {
       <div className="col-span-1 shadow-xl ">
         <Navigation />
       </div>
-      <div className=" col-span-4">2</div>
+      <div className=" col-span-4">
+        <Header />
+      </div>
     </main>
   );
 }
