@@ -5,7 +5,7 @@ import SecondaryButton from "../common/SecondaryButton";
 
 const Header = () => {
   return (
-    <header className="bg-slate-900 p-6 w-full mb-10">
+    <header className="bg-slate-900 p-6 w-full ">
       <div className="flex items-center w-full justify-between ">
         <div className="flex items-center transition-all bg-slate-800 rounded-lg px-3 py-2 w-4/12 hover:w-5/12 duration-500 ">
           <input
