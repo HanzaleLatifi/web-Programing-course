@@ -2,6 +2,7 @@ import '../globals.css'
 import vazirFont from "../../constants/localFonts";
 import Header from "../../components/Header";
 import Navigation from "../../components/Navigation";
+import { Footer } from '@/components/Footer';
 
 
 
@@ -22,7 +23,9 @@ export default function RootLayout({ children }) {
               <Header />
               {children}
             </div>
+            
         </main>
+        <Footer/>
       </body>
     </html>
   )
