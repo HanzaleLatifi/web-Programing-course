@@ -25,13 +25,8 @@ export const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-28 flex flex-col md:flex-row md:justify-between items-center text-sm text-gray-400">
-                        <p className="order-2 md:order-1 mt-8 md:mt-0"> &copy; design by hanzale latifi </p>
-                        <div className="order-1 md:order-2">
-                            <span className="px-2 border-l">درباره ما</span>
-                            <span className="px-2 border-l">تماس با</span>
-                            <span className="px-2">سیاست حفظ حریم خصوصی</span>
-                        </div>
+                    <div className="mt-16 flex flex-col md:flex-row md:justify-center items-center text-sm  text-gray-400">
+                          <p className="order-2 md:order-1 mt-8 md:mt-0"> &copy; design by hanzale latifi </p> 
                     </div>
                 </div>
             </div>
