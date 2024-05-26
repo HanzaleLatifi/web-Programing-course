@@ -19,13 +19,12 @@ export default function RootLayout({ children }) {
             <div className="col-span-1 shadow-xl ">
               <Navigation />
             </div>
-            <div className="col-span-4">
+            <div className="col-span-4 ">
               <Header />
               {children}
+              <Footer/>
             </div>
-            
         </main>
-        <Footer/>
       </body>
     </html>
   )
