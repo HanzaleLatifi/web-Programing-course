@@ -1,9 +1,9 @@
 import React from 'react'
 
-const page = () => {
+const AuthPage = () => {
   return (
     <div>auth page</div>
   )
 }
 
-export default page
+export default AuthPage
