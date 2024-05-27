@@ -2,6 +2,7 @@
 import React from "react";
 import { MagnifyingGlassCircleIcon } from "@heroicons/react/24/outline";
 import SecondaryButton from "../common/SecondaryButton";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -22,7 +23,9 @@ const Header = () => {
          {/* <button className={` transition-all px-4 py-2 border-2 border-red-700 rounded-lg text-red-700 hover:bg-red-700 hover:text-slate-200 `}>
           ورود / ثبت نام
         </button> */}
-          <SecondaryButton text={"ورود / ثبت نام"} otherClassNames={"ml-4"} />
+          <Link href='/auth'>
+           <SecondaryButton text={"ورود / ثبت نام"} otherClassNames={"ml-4"} />
+          </Link>
           <SecondaryButton text={"خرید اشتراک"} />
         </div>
       </div>
