@@ -4,6 +4,7 @@ import Header from "../../components/Header";
 import Navigation from "../../components/Navigation";
 import { Footer } from '@/components/Footer';
 import  { Toaster } from 'react-hot-toast';
+import Providers from './Providers';
 
 
 
@@ -25,7 +26,7 @@ export default function RootLayout({ children }) {
             </div>
             <div className="col-span-4 ">
               <Header />
-              {children}
+              <Providers> {children}  </Providers>
               <Footer/>
             </div>
         </main>
