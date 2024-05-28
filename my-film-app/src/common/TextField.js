@@ -1,7 +1,9 @@
+"use client"
+
 function TextField({ label, name, value, onChange }) {
     return (
       <div>
-        <label htmlFor={name} className="block mb-2">
+        <label htmlFor={name} className="block mb-2 text-gray-400">
           {label}
         </label>
         <input
