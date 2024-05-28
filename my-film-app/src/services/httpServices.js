@@ -1,13 +1,12 @@
 import axios from "axios";
 
 const app = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL,
-  withCredentials: true,
+  baseURL: process.env.NEXT_PUBLIC_API_URL
+  
 });
 
 
 
-// 
 
 const http = {
   get: app.get,
