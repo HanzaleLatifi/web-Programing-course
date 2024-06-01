@@ -2,9 +2,9 @@ import React from 'react'
 import TextField from '@/common/TextField';
 import PrimaryButton from '@/common/PrimaryButton';
 
-const SendOtpForm = ({submitHandler , phoneNumber , inputChangeHandler , isLoading}) => {
+const SendOtpForm = ({onSubmit , phoneNumber , inputChangeHandler , isLoading}) => {
   return (
-            <form className="space-y-3" onSubmit={submitHandler}>
+            <form className="space-y-3" onSubmit={onSubmit}>
                 <TextField
                     label="شماره موبایل"
                     name="phoneNumber"
