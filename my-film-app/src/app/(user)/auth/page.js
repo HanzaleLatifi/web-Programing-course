@@ -2,18 +2,19 @@
 import PrimaryButton from '@/common/PrimaryButton';
 import TextField from '@/common/TextField';
 import http from '@/services/httpServices';
+import axios from 'axios';
 import React,{useState} from 'react'
 import toast from 'react-hot-toast';
 
 const AuthPage = () => {
 
   const [phoneNumber, setPhoneNumber] = useState();
-Nu
   let isLoading=false;
 
   const submitHandler=async(e)=>{
     e.preventDefault();
     try {
+      await axios.post('https://moviesapi.ir/api/v1/rregister',{email:'h.lssas@gmail.com',password:'1478964',name:'hanli'})
     } catch (error) {
       toast.error(error?.response)
 

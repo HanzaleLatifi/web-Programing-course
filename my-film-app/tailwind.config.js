@@ -10,6 +10,9 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-vazir)"],
       },
+      colors:{
+        primary:'#b91c1c'
+      }
      
     },
   },

@@ -21,7 +21,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="bg-slate-900 text-white py-4 px-6  h-full shadow-xl  ">
+    <nav className="bg-slate-900 text-white py-4 px-6  h-full   ">
       <div className=" flex flex-col items-start space-y-3 text-lg bg-slate-900 fixed ">
         <div className="text-4xl mb-8 py-2 pl-4 h">لوگو</div>
 
