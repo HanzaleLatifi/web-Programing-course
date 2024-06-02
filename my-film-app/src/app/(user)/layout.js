@@ -8,7 +8,6 @@ import Providers from './Providers';
 
 
 
-
 export const metadata = {
   title: 'movie app',
   description: 'website for manage film',
@@ -25,9 +24,9 @@ export default function RootLayout({ children }) {
               <Navigation />
             </div>
             <div className="col-span-4 ">
-              <Header />
-              <Providers> {children}  </Providers>
-              <Footer/>
+                <Header />
+                  <Providers> {children}  </Providers> 
+                <Footer/>
             </div>
         </main>
       </body>

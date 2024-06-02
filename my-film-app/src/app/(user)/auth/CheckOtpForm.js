@@ -9,7 +9,7 @@ export const CheckOtpForm = ({isLoading,onSubmit,otp,setOtp , time,onResendOtp ,
     
   return (
         <form className="space-y-3" onSubmit={onSubmit}>
-            <div className='flex justify-between text-gray-200'>
+            <div className='flex justify-between items-center text-gray-200'>
                 <button onClick={onBack} className="mb-4">
                     <ArrowRightCircleIcon className='w-8 h-7'/>
                 </button>
