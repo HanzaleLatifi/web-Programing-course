@@ -9,3 +9,5 @@ export const useGetGenres = () =>
       retry: false,
       refetchOnWindowFocus: true,
     });
+
+   
