@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
+  FilmIcon,
   HomeIcon,
   MagnifyingGlassIcon,
   HeartIcon,
@@ -34,6 +35,17 @@ const Navigation = () => {
           <HomeIcon className="h-6 w-6 mx-1" />
           <span className="font-semibold ">خانه</span>
         </Link>
+
+        <Link
+          href="/movies"
+          className={`flex items-center py-2 pl-4 hover:hover-text  ${isActive(
+            "/movies"
+          )}`}
+        >
+          <FilmIcon className="h-6 w-6 mx-1" />
+          <span className="font-semibold">لیست فیلم ها</span>
+        </Link>
+        
         <Link
           href="/category"
           className={`flex items-center py-2 pl-4 hover:hover-text  ${isActive(
@@ -43,15 +55,7 @@ const Navigation = () => {
           <ListBulletIcon className="h-6 w-6 mx-1" />
           <span className="font-semibold">دسته بندی</span>
         </Link>
-        <Link
-          href="/favorites"
-          className={`flex items-center py-2 pl-4 hover:hover-text  ${isActive(
-            "/favorites"
-          )}`}
-        >
-          <HeartIcon className="h-6 w-6 mx-1" />
-          <span className="font-semibold">علاقمندی ها</span>
-        </Link>
+      
         <Link
           href="/serach"
           className={`flex items-center py-2 pl-4 hover:hover-text  ${isActive(

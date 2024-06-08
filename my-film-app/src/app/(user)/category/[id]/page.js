@@ -7,20 +7,21 @@ import PrimaryButton from '@/common/PrimaryButton';
 import Link from 'next/link';
 
 
+
 const page = () => {
     const{id} =useParams()
     const { data, isLoading:loadingMovie }=useGetMoviesByGenre(id);
 
-    if(loadingMovie) return <p>loading ...</p>
+    if(loadingMovie) return <p>loading...</p>
     console.log(data)
     
     
 
     return (
-    <div className='grid md:grid-cols-4 grid-cols-1 gap-y-6 gap-x-4 p-4'>
+    <div className='grid md:grid-cols-4 grid-cols-1 gap-6 p-4'>
         {data.data.map(movie=>{
             return <div key={movie.id} className=' bg-slate-900 rounded-2xl shadow-2xl'>
-                         <Image src={movie.poster} width={300} height={300}  loading='lazy' blurDataURL={movie.poster} alt={movie.title} />
+                         <Image src={movie.poster} width={300} height={300} style={{maxHeight:'270px'}}  loading='lazy' blurDataURL={movie.poster} alt={movie.title} />
                     <div className='p-2 '>
                         <h2 className='text-white text-center my-1 text-md '>{movie.title.length>20 ? movie.title.substring(movie.title.length-5) : movie.title}</h2>
                         <div className='flex items-center my-1 justify-center  '>
