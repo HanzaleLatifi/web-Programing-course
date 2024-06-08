@@ -1,6 +1,6 @@
 
 import { getOneGenre } from "@/services/getGenre";
-import { getAllMovie } from "@/services/getMovie";
+import { getAllMovie, getMovieById } from "@/services/getMovie";
 import {useQuery} from "@tanstack/react-query";
 
 export const useGetMovies = () =>
@@ -18,4 +18,12 @@ export const useGetMovies = () =>
         retry: false,
         refetchOnWindowFocus: true,
   });
+
+  export const useGetMovieById = (id) =>
+    useQuery ({
+      queryKey: ["get-movies-by-id",id],
+      queryFn:()=> getMovieById(id),
+      retry: false,
+      refetchOnWindowFocus: true,
+});
  
