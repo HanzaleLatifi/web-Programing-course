@@ -9,10 +9,9 @@ import FilmCard from '@/components/FilmCard';
 
 const page = () => {
     const{id} =useParams()
-    const { data, isLoading:loadingMovie }=useGetMoviesByGenre(id);
+    const { data, isLoading:loadingMovie}=useGetMoviesByGenre(id);
 
-    if(loadingMovie) return <p>loading...</p>
-    console.log(data)
+    if(loadingMovie) return <p className='w-full '>loading...</p>
     
     
 

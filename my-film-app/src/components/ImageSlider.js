@@ -4,7 +4,7 @@ import React from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const ImageSlider = ({data}) => {
+const ImageSlider = ({data , isLoading}) => {
 
     let settings = {
         dots: true,
@@ -18,7 +18,7 @@ const ImageSlider = ({data}) => {
         rtl: true
 
       };
-    
+   
   return (
             <Slider {...settings} >
                {data.map((item, index) => (

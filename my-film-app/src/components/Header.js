@@ -26,7 +26,9 @@ const Header = () => {
           <Link href='/auth'>
            <SecondaryButton text={"ورود / ثبت نام"} otherClassNames={"ml-4"} />
           </Link>
-          <SecondaryButton text={"خرید اشتراک"} />
+          <Link href="/buysub">
+             <SecondaryButton text={"خرید اشتراک"} />
+          </Link>
         </div>
       </div>
     </header>

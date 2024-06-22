@@ -10,6 +10,11 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-vazir)"],
       },
+      backgroundImage: {
+        'golden-gradient': 'linear-gradient(90deg, #FFD700, #FFB700, #FF9B00)',
+        'silver-gradient': 'linear-gradient(90deg, #C0C0C0, #D3D3D3, #E5E4E2)',
+
+      },
       colors:{
         primary:'#b91c1c'
       }

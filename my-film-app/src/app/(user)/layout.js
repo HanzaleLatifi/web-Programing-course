@@ -18,12 +18,12 @@ export default function RootLayout({ children }) {
     <html lang="fa" dir="rtl">
       <body  className={`${vazirFont.variable} font-sans`}>
 
-          <main className="grid grid-cols-5 max-w-[1440px] mx-auto bg-slate-800">
+          <main className="grid grid-cols-5 max-w-[1440px] mx-auto bg-slate-800 min-h-screen">
             <Toaster/>
             <div className="col-span-1 shadow-xl ">
               <Navigation />
             </div>
-            <div className="col-span-4 ">
+            <div className="col-span-4   ">
                 <Header />
                   <Providers> {children}  </Providers> 
                 <Footer/>
