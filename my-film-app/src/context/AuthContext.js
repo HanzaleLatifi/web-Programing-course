@@ -1,4 +1,5 @@
 'use client'
+import { getFromLocalStorage } from '@/Utils/LocalStorage';
 import { createContext, useContext, useEffect, useState } from 'react';
 
 // Create the context
@@ -8,6 +9,14 @@ const AuthContext = createContext();
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
 
+  useEffect(() => {
+    const userData = getFromLocalStorage('authUser');
+    if (userData) {
+      setUser(userData);
+    } else {
+     
+    }
+  }, []);
   
 
   return (

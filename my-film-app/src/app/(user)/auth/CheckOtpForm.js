@@ -5,6 +5,7 @@ import { ArrowRightCircleIcon } from '@heroicons/react/24/solid';
 import { useAuthProvider } from '@/context/AuthContext';
 import toast from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
+import { saveToLocalStorage } from '@/Utils/LocalStorage';
 
 
 
@@ -18,6 +19,7 @@ export const CheckOtpForm = ({isLoading,onSubmit,otp,setOtp , time,onResendOtp ,
         setUser(phoneNumber);
         toast.success('با موفقیت وارد حساب خود شدید');
         router.push('/')
+        saveToLocalStorage('authUser', phoneNumber);
         
 
     }
