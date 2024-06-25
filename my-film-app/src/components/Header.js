@@ -1,10 +1,12 @@
 "use client";
 import React from "react";
-import { MagnifyingGlassCircleIcon } from "@heroicons/react/24/outline";
+import { MagnifyingGlassCircleIcon ,UserCircleIcon } from "@heroicons/react/24/outline";
 import SecondaryButton from "../common/SecondaryButton";
 import Link from "next/link";
+import { useAuthProvider } from "@/context/AuthContext";
 
 const Header = () => {
+  const {user}=useAuthProvider();
   return (
     <header className="bg-slate-900 p-6 w-full shadow-md ">
       <div className="flex items-center w-full justify-between ">
@@ -19,13 +21,14 @@ const Header = () => {
         </div>
 
         {/* Login Button */}
-        <div className="">
+        <div className="flex items-center">
          {/* <button className={` transition-all px-4 py-2 border-2 border-red-700 rounded-lg text-red-700 hover:bg-red-700 hover:text-slate-200 `}>
           ورود / ثبت نام
         </button> */}
-          <Link href='/auth'>
+          {!user ? <Link href='/auth'>
            <SecondaryButton text={"ورود / ثبت نام"} otherClassNames={"ml-4"} />
-          </Link>
+          </Link> : <p className="ml-4 text-xl text-primary flex items-end ">{user} <UserCircleIcon className="h-9 w-9 mx-0.5 text-white"/> </p>  }
+         
           <Link href="/buysub">
              <SecondaryButton text={"خرید اشتراک"} />
           </Link>

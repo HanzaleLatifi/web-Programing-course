@@ -5,7 +5,7 @@ import Navigation from "../../components/Navigation";
 import { Footer } from '@/components/Footer';
 import  { Toaster } from 'react-hot-toast';
 import Providers from './Providers';
-import AuthProvider from '../context/AuthContext';
+import AuthProvider from '../../context/AuthContext';
 
 
 

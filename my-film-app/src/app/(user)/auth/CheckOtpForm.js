@@ -2,19 +2,23 @@ import React from 'react'
 import OtpInput from 'react-otp-input';
 import PrimaryButton from '@/common/PrimaryButton';
 import { ArrowRightCircleIcon } from '@heroicons/react/24/solid';
-import { useAuthProvider } from '@/app/context/AuthContext';
+import { useAuthProvider } from '@/context/AuthContext';
 import toast from 'react-hot-toast';
+import { useRouter } from 'next/navigation';
+
 
 
 
 export const CheckOtpForm = ({isLoading,onSubmit,otp,setOtp , time,onResendOtp ,onBack,phoneNumber }) => {
 
+    const router = useRouter();
     const{setUser}=useAuthProvider();
     
-
     const loginHandler=()=>{
         setUser(phoneNumber);
-        toast.success('با موفقیت وارد حساب خود شدید')
+        toast.success('با موفقیت وارد حساب خود شدید');
+        router.push('/')
+        
 
     }
     
