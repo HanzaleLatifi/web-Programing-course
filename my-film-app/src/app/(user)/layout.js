@@ -5,6 +5,8 @@ import Navigation from "../../components/Navigation";
 import { Footer } from '@/components/Footer';
 import  { Toaster } from 'react-hot-toast';
 import Providers from './Providers';
+import AuthProvider from '../context/AuthContext';
+
 
 
 
@@ -24,9 +26,12 @@ export default function RootLayout({ children }) {
               <Navigation />
             </div>
             <div className="col-span-4   ">
+              <AuthProvider>
                 <Header />
-                  <Providers> {children}  </Providers> 
-                <Footer/>
+                    <Providers> {children}  </Providers> 
+                  <Footer/>
+              </AuthProvider>
+               
             </div>
         </main>
       </body>

@@ -1,11 +1,22 @@
 import React from 'react'
 import OtpInput from 'react-otp-input';
 import PrimaryButton from '@/common/PrimaryButton';
-import { ArrowRightCircleIcon } from '@heroicons/react/24/solid'
+import { ArrowRightCircleIcon } from '@heroicons/react/24/solid';
+import { useAuthProvider } from '@/app/context/AuthContext';
+import toast from 'react-hot-toast';
 
 
 
-export const CheckOtpForm = ({isLoading,onSubmit,otp,setOtp , time,onResendOtp ,onBack }) => {
+export const CheckOtpForm = ({isLoading,onSubmit,otp,setOtp , time,onResendOtp ,onBack,phoneNumber }) => {
+
+    const{setUser}=useAuthProvider();
+    
+
+    const loginHandler=()=>{
+        setUser(phoneNumber);
+        toast.success('با موفقیت وارد حساب خود شدید')
+
+    }
     
   return (
         <form className="space-y-3" onSubmit={onSubmit}>
@@ -42,7 +53,7 @@ export const CheckOtpForm = ({isLoading,onSubmit,otp,setOtp , time,onResendOtp ,
         {isLoading ? (
             <p>is isLoading ... </p>
         ) : (
-            <PrimaryButton type="submit" text="تایید کد" otherClassNames="w-full mt-4"/>
+            <PrimaryButton onClick={loginHandler} type="submit" text="تایید کد" otherClassNames="w-full mt-4"/>
         )}
         </div>
     </form>  )

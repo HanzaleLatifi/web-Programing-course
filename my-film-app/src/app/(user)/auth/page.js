@@ -63,6 +63,7 @@ const AuthPage = () => {
                 time={time}
                 onResendOtp={sendOtpHandler}
                 onBack={() => setStep((s) => s - 1)}
+                phoneNumber={phoneNumber}
 
                 />
         
