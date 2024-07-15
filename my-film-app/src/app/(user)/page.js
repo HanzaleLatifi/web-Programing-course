@@ -42,17 +42,17 @@ export default function Home() {
      
         
         <div className='shadow-md'>
-            <p className='text-xl text-white border-r-2 rounded-xl  border-primary w-fit px-4 my-1 '> جدیدترین ها </p>
+            <p className='text-xl dark:text-white text-gray-800 border-r-2 rounded-xl  border-primary w-fit px-4 my-1 '> جدیدترین ها </p>
             <ImageSlider data={data} isLoading={isLoading}/> 
         </div>
 
         <div className='shadow-md'>
-          <p className='text-xl text-white border-r-2 rounded-xl  border-primary w-fit px-4 my-1'> پربازدیدترین </p>
+          <p className='text-xl dark:text-white text-gray-800 border-r-2 rounded-xl  border-primary w-fit px-4 my-1'> پربازدیدترین </p>
           <ImageSlider data={data} isLoading={isLoading}/> 
         </div>
 
         <div className='shadow-md'>
-          <p className='text-xl text-white border-r-2 rounded-xl  border-primary w-fit px-4 my-1 '> پیشنهادی </p>
+          <p className='text-xl dark:text-white text-gray-800 border-r-2 rounded-xl  border-primary w-fit px-4 my-1 '> پیشنهادی </p>
           <ImageSlider data={data} isLoading={isLoading}/> 
         </div>
         

@@ -22,9 +22,9 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="bg-slate-900 text-white py-4 px-6  h-full   ">
-      <div className=" flex flex-col items-start space-y-3 text-lg bg-slate-900 fixed ">
-        <div className="text-4xl mb-8 py-2 pl-4 h">لوگو</div>
+    <nav className="dark:bg-slate-900 bg-gray-200  dark:text-white text-gray-800 py-4 px-6  h-full shadow-lg   ">
+      <div className=" flex flex-col items-start space-y-3 text-lg dark:bg-slate-900 bg-gray-200 fixed ">
+        <div className="text-4xl mb-8 py-2 pl-4 h ">لوگو</div>
 
         <Link
           href="/"
@@ -32,8 +32,8 @@ const Navigation = () => {
             "/"
           )}`}
         >
-          <HomeIcon className="h-6 w-6 mx-1" />
-          <span className="font-semibold ">خانه</span>
+          <HomeIcon className="h-6 w-6 mx-1 dark:text-gray-200 text-gray-800" />
+          <span className="font-semibold dark:text-gray-200 text-gray-800">خانه</span>
         </Link>
 
         <Link
@@ -42,8 +42,8 @@ const Navigation = () => {
             "/movies"
           )}`}
         >
-          <FilmIcon className="h-6 w-6 mx-1" />
-          <span className="font-semibold">لیست فیلم ها</span>
+          <FilmIcon className="h-6 w-6 mx-1 dark:text-gray-200 text-gray-800" />
+          <span className="font-semibold dark:text-gray-200 text-gray-800">لیست فیلم ها</span>
         </Link>
         
         <Link
@@ -52,8 +52,8 @@ const Navigation = () => {
             "/category"
           )}`}
         >
-          <ListBulletIcon className="h-6 w-6 mx-1" />
-          <span className="font-semibold">دسته بندی</span>
+          <ListBulletIcon className="h-6 w-6 mx-1 dark:text-gray-200 text-gray-800" />
+          <span className="font-semibold dark:text-gray-200 text-gray-800">دسته بندی</span>
         </Link>
       
         <Link
@@ -62,9 +62,10 @@ const Navigation = () => {
             "/search"
           )}`}
         >
-          <MagnifyingGlassIcon className="h-6 w-6 mx-1" />
-          <span className="font-semibold">جستجوی پیشرفته</span>
+          <MagnifyingGlassIcon className="h-6 w-6 mx-1 dark:text-gray-200 text-gray-800" />
+          <span className="font-semibold dark:text-gray-200 text-gray-800">جستجوی پیشرفته</span>
         </Link>
+    
       </div>
     </nav>
   );

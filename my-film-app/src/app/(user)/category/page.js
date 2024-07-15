@@ -16,7 +16,7 @@ const { data:genres, error, isLoading:loadingGenres } =useGetGenres();
  if(loadingGenres) return <p className=''>loading</p>
   return (
     <div className='m-4 '>
-       <p className='text-white font-2xl my-6'>ژانر موردنظر خود را انتخاب کنید</p>
+       <p className='dark:text-white text-gray-800 font-2xl my-6'>ژانر موردنظر خود را انتخاب کنید</p>
        <section className='grid grid-cols-6 gap-4 mx-4'>
         {genres.map(genre=>{
             return <Link href={`/category/${genre.id}`} key={genre.id}>

@@ -26,7 +26,7 @@ export const CheckOtpForm = ({isLoading,onSubmit,otp,setOtp , time,onResendOtp ,
     
   return (
         <form className="space-y-3" onSubmit={onSubmit}>
-            <div className='flex justify-between items-center text-gray-200'>
+            <div className='flex justify-between items-center dark:text-gray-200 text-gray-800'>
                 <button onClick={onBack} className="mb-4">
                     <ArrowRightCircleIcon className='w-8 h-7'/>
                 </button>
@@ -38,13 +38,13 @@ export const CheckOtpForm = ({isLoading,onSubmit,otp,setOtp , time,onResendOtp ,
                     )}
                 </div>
             </div>
-            <p className='text-gray-200 text-lg mb-4'>کد تایید را وارد کنید</p>
+            <p className='dark:text-gray-200 text-gray-700 text-lg mb-4'>کد تایید را وارد کنید</p>
           
             <OtpInput
                 value={otp}
                 onChange={setOtp}
                 numInputs={4}
-                renderSeparator={<span className='text-gray-200'>-</span>}
+                renderSeparator={<span className='dark:text-gray-200 text-gray-700'>-</span>}
                 inputStyle={{
                     width: "2.8rem",
                     padding: "0.5rem 0.2rem",

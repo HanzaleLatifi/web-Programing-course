@@ -8,13 +8,13 @@ import Link from 'next/link';
 
 const FilmCard = ({movie}) => {
          return (
-                <div  className='bg-slate-900 rounded-2xl shadow-2xl'>
+                <div  className='dark:bg-slate-900 bg-gray-300 rounded-2xl shadow-xl'>
                      <Image src={movie.poster} width={300} height={300} style={{maxHeight:'270px'}}  loading='lazy' blurDataURL={movie.poster} alt={movie.title} />
                         <div className='p-2 '>
-                            <h2 className='text-white text-center my-1 text-md '>{movie.title.length>23 ? movie.title.substring(0,20) : movie.title}</h2>
+                            <h2 className='dark:text-white text-gray-800 text-center my-1 text-md '>{movie.title.length>23 ? movie.title.substring(0,20) : movie.title}</h2>
                             <div className='flex items-center my-1 justify-center  '>
                                 {movie.genres.map(tag=>{
-                                    return <span key={tag} className='border-2 border-primary text-sm text-gray-400 rounded-full px-2 py-1 mx-0.5'>{tag}</span>
+                                    return <span key={tag} className='border-2 border-primary text-sm dark:text-gray-400 text-gray-600 rounded-full px-2 py-1 mx-0.5'>{tag}</span>
                                 })}
                             </div>
                         </div>
